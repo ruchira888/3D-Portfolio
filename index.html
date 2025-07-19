@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en"> <head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Ruchira Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/letter-r2.png" class="logo">
+        <span class="word-style"></span>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <!-- <li><a href="#">Services</a></li> -->
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+
+
+
+        </ul>
+      </nav>
+      <img src="images/ruchi.jpeg" class="ruchi-style"/>
+      <div class="header-text">
+        <p>Frontend Developer</p>
+        <h1>Hi,I'm Ruchira Patil</h1>
+        <h3>Passionate about coding and building user-first experiences. 
+          <br>I enjoy solving real-world problems and delivering </br>scalable front-end solutions.</h3>
+      </div>
+    </div>
+<!-- ---------about----------- -->
+
+
+  </div id="about">
+  <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/ruchira-pic2.jpeg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p class="about-text">Hello 👋 I'm a Third Year AIML student
+            I’m a Front-end Developer who enjoys turning ideas into responsive, accessible, and clean user interfaces. I’m passionate about writing reliable code, solving real-world problems, and building products that actually help people.
+
+            Right now, I mostly work with React and Tailwind CSS, and I’m currently diving into the backend side of things — exploring databases, authentication, and server-side logic to round out my full-stack skills.
+
+            Outside of coding… I’m usually still coding. Whether it’s fixing bugs, learning something new, or refactoring for the third time, I genuinely enjoy the process of building and improving.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('expiernce')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web app Dev</li>
+              <li><span>A pp development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+           <div class="tab-contents" id="expiernce">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web app Dev</li>
+              <li><span>A pp development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+           <div class="tab-contents" id="education">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web app Dev</li>
+              <li><span>A pp development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+  <!-- ---------------projects--------------- -->
+  <div id="projects">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script>
+   var tablinks=document.getElementsByClassName("tab-links")
+    var tabcontents=document.getElementsByClassName("tab-contents")
+   
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+</script>
+
+
+</body>
+</html>
