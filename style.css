@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   background-color: white;
+  color: black;
 }
 body {
   background: black;
@@ -30,12 +31,17 @@ body {
 }
 .ruchi-style {
   height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   width: 350px;
+  max-width: 90vw;
   border-radius: 20%;
   top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
-  z-index: 10px;
+
   position: absolute;
   z-index: 2;
   outline: 5px solid hotpink;
@@ -93,9 +99,9 @@ nav ul li a:hover::after {
   padding-top: 10px;
 }
 .header-text h1 span {
-  color: #ff004f;
+  color: hotpink;
 }
-
+/* ------about------ */
 #about {
   padding: 80px 0;
 
@@ -146,7 +152,7 @@ nav ul li a:hover::after {
   content: "";
   width: 0;
   height: 3px;
-  background: #ff004f;
+  background: hotpink;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -162,8 +168,9 @@ nav ul li a:hover::after {
   color: black;
 }
 .tab-contents ul li span {
-  color: #ff004f;
-  font-size: 14px;
+  color: hotpink;
+  font-size: 16px;
+  font-weight: bold;
 }
 .tab-contents {
   display: none;
@@ -171,13 +178,238 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
   display: block;
 }
-/*--------------services-----------------*/
-#services {
-  padding: 30px 0;
+.tab-contents .skills span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
 }
-.services-list {
+#skills span {
+  font-weight: bold;
+}
+.bar {
+  background: #2c2c2c;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 12px;
+  width: 20%;
+}
+.progress {
+  background: #72db3d;
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+.edu-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  max-width: 45vw;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+.achieve li::before {
+  content: "•";
+  color: black;
+  font-weight: bold;
+}
+/*--------------services-----------------*/
+
+#projects {
+  padding: 50px 0;
+}
+.work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  /* height: auto; */
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.icon-color {
+  color: black;
+  /* font-size: 24px; */
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), white);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  background: none;
+}
+.layer p {
+  background: none;
+  font-weight: 500;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font: size 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work::hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 40px auto;
+  width: fit-content;
+  border: 1px solid #ff1493;
+  background-color: hotpink;
+  padding: 14px 50px;
+  border-radius: 6px;
+
+  text-decoration: none;
+  color: black;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background-color: pink;
+  color: white;
+}
+/* contact */
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: hotpink;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  display: inline-block;
+  color: hotpink;
+  transition: transform 0.5s;
+}
+.social-icons a:hover i {
+  color: pink;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: hotpink;
+}
+.btn.btn2:hover {
+  background-color: pink;
+}
+.contact-right form {
+  width: 80%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: pink;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/*--------css for small screens----------*/
+@media only screen and (max-width: 768px) {
+  #header {
+    height: auto;
+    min-height: 100vh; /* Maintain full viewport height */
+    padding-bottom: 50px;
+    position: relative; /* Needed for absolute children */
+  }
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .header-img {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .header-text {
+    order: 2;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .ruchi-style {
+    position: static;
+    transform: none;
+    width: 60%;
+    max-width: 250px;
+    margin: 20px auto;
+    order: 1;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+#msg {
+  color: #61b752;
+  margin-top: -10px;
+  display: block;
 }
